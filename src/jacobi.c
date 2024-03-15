@@ -24,7 +24,7 @@ const double dmid = 1.0 / (2.0 * (dxxinv + dyyinv));
 inline double srcFunc(long i, long j) {
 	double x = xMin + i * dx;
 	double y = yMin + j * dy;
-	return (fabs(x) > 0.5 || fabs(y) > 0.5)?0:1;
+	return fabs(x) > 0.5 || fabs(y) > 0.5 ?0:1;
 }
 
 /* 2-D Jacobi approximate given a guess as input. */
