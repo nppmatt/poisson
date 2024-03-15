@@ -35,11 +35,11 @@ double** jacobi(double** input, long iterations) {
 	swap = matrix(1, GRID_W, 1, GRID_H);
 	long it, row, col;
 	for (it = 1; it <= iterations; ++it) {
-		if (it % 2 == 0) {
+		//if (it % 2 == 0) {
 			swap = input;
 			input = approx;
 			approx = input;
-		}
+		//}
 		for (row = 2; row <= GRID_H-1; ++row) {
 			for (col = 2; col <= GRID_W-1; ++col) {
 				approx[row][col] = (srcFunc(row, col) + 
