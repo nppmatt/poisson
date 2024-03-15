@@ -68,7 +68,7 @@ int main() {
 		}
 	}
 
-	approxOutput = jacobi(guess, 10);
+	approxOutput = jacobi(guess, 20);
 
 
 	/* Print data as CSV with last row to be truncated */
