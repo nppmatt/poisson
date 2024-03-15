@@ -34,7 +34,7 @@ int main() {
 	
 	for (row = 1; row <= GRID_W; ++row) {
 		for (col = 1; col <= GRID_H; ++col) {
-			printf("%f ", sourceMatrix[row][col]);
+			printf("%f, ", sourceMatrix[row][col]);
 		}
 		printf("\n");
 	}
