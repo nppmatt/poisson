@@ -19,8 +19,8 @@ int main() {
 
 	long row, col;
 	double xPos, yPos;
-	for (row = 1; row <= GRID_W; ++row) {
-		for (col = 1; col <= GRID_H; ++col) {
+	for (row = 1; row <= GRID_H; ++row) {
+		for (col = 1; col <= GRID_W; ++col) {
 			xPos = fabs(xMin + (row * STEP));
 			yPos = fabs(yMin + (col * STEP));
 			if (xPos < 0.5 && yPos < 0.5) {
@@ -32,9 +32,9 @@ int main() {
 		}
 	}
 	
-	for (row = 1; row <= GRID_W; ++row) {
-		for (col = 1; col <= GRID_H; ++col) {
-			if (row == GRID_W) {
+	for (row = 1; row <= GRID_H; ++row) {
+		for (col = 1; col <= GRID_W; ++col) {
+			if (col == GRID_W) {
 				printf("%f", sourceMatrix[row][col]);
 			}
 			else {
