@@ -34,11 +34,11 @@ int main() {
 	
 	for (row = 1; row <= GRID_W; ++row) {
 		for (col = 1; col <= GRID_H; ++col) {
-			if (row != GRID_W) {
-				printf("%f, ", sourceMatrix[row][col]);
+			if (row == GRID_W) {
+				printf("%f", sourceMatrix[row][col]);
 			}
 			else {
-				printf("%f", sourceMatrix[row][col]);
+				printf("%f,", sourceMatrix[row][col]);
 			}
 		}
 		printf("\n");
