@@ -42,7 +42,7 @@ double** jacobi(double** input, long iterations) {
 		//}
 		for (row = 2; row <= GRID_H-1; ++row) {
 			for (col = 2; col <= GRID_W-1; ++col) {
-				approx[row][col] = (srcFunc(row, col) + 
+				approx[row][col] = (approx[row][col] + 
 					dxxinv * (approx[row][col+1] + approx[row][col-1]) +
 					dyyinv * (approx[row+1][col] + approx[row-1][col])
 					) * dmid;
@@ -68,7 +68,7 @@ int main() {
 		}
 	}
 
-	approxOutput = jacobi(guess, 20);
+	approxOutput = jacobi(guess, 10);
 
 
 	/* Print data as CSV with last row to be truncated */
