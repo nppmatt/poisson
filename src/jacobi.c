@@ -61,14 +61,14 @@ int main() {
 	long row, col;
 	double xPos, yPos;
 
-	/* Set source function over grid */
+	/* Set a zeroed grid as our initial guess. */
 	for (row = 1; row <= GRID_H; ++row) {
 		for (col = 1; col <= GRID_W; ++col) {
 			guess[row][col] = 0.0;
 		}
 	}
 
-	approxOutput = jacobi(guess, 10);
+	approxOutput = jacobi(guess, ITER);
 
 
 	/* Print data as CSV with last row to be truncated */
