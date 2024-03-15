@@ -6,7 +6,7 @@
 
 const long GRID_W = 33;
 const long GRID_H = 33;
-const double STEP = 2.0 / GRID_W;
+const double STEP = 1.0 / GRID_W;
 const long ITER = 10;
 const double xMin = -1.0;
 const double xMax = 1.0;
