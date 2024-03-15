@@ -24,7 +24,7 @@ const double dmid = 1.0 / (2.0 * (dxxinv + dyyinv));
 inline double srcFunc(long i, long j) {
 	double x = xMin + i * dx;
 	double y = yMin + j * dy;
-	return fabs(x) > 0.5 || fabs(y) > 0.5 ?0:1;
+	return fabs(x) > 0.5 || fabs(y) > 0.5 ? 0.0 : 1.0;
 }
 
 /* 2-D Jacobi approximate given a guess as input. */
@@ -42,7 +42,7 @@ double** jacobi(double** input, long iterations) {
 		//}
 		for (row = 2; row <= GRID_H-1; ++row) {
 			for (col = 2; col <= GRID_W-1; ++col) {
-				approx[row][col] = (approx[row][col] + 
+				approx[row][col] = (srcFunc(row, col) + 
 					dxxinv * (approx[row][col+1] + approx[row][col-1]) +
 					dyyinv * (approx[row+1][col] + approx[row-1][col])
 					) * dmid;
